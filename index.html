@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .terminal {
+      border: 1px solid #0f0;
+      border-radius: 5px;
+      padding: 10px;
+      flex-grow: 1;
+      overflow: auto;
+    }
+
+    .command {
+      color: #0f0;
+      display: inline-block;
+    }
+
+    .output {
+      color: #fff;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .prompt {
+      color: #0f0;
+    }
+
+    .path {
+      color: #00f;
+    }
+
+    .symbol {
+      color: #f00;
+    }
+
+    /* Typing effect animation */
+    .typing::after {
+      content: "|";
+      display: inline-block;
+      animation: cursor-animation 0.7s infinite;
+    }
+
+    @keyframes cursor-animation {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Loading effect animation */
+    .loading {
+      animation: loading-animation 1.5s infinite;
+    }
+
+    @keyframes loading-animation {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Navigation */
+    .nav {
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #0f0;
+      text-decoration: none;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .position {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .download-btn {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .download-btn a {
+      color: #0f0;
+      background-color: #000;
+      border: 1px solid #0f0;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .download-btn a:hover {
+      background-color: #0f0;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="name">Mohammed Ashraf</h1>
+    <h3 class="position">Driving Innovation at the Intersection of ML and Backend Development</h3>
+    <div class="download-btn">
+      <a href="mohammedashraf_resume.pdf" download>Download Resume as PDF</a>
+    </div>
+    <br/>
+    <div class="terminal">
+      <div class="command" id="about">
+        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
+        <span class="typing">About-me</span>
+      </div>
+      <div class="output">
+        <span class="loading">Loading...</span>
+        <span>Seasoned machine learning and backend engineer with 4 years of experience in creating and deploying machine learning models, and designing scalable backend systems. Skilled in multiple programming languages and frameworks, including Python, TensorFlow, FastAPI, and Flask. Possesses a deep understanding of data structures, algorithms, and software design principles. Demonstrated ability to work both independently and collaboratively to deliver reliable software solutions.</span>
+      </div>
+
+      <div class="command" id="contact">
+          <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
+          <span class="typing">Contact-details</span>
+        </div>
+        <div class="output">
+          <span class="loading">Loading...</span>
+          <ul>
+            <li>Mail: Mohammed97ashraf@gmail.com</li>
+          </ul>
+        </div>
+
+        <div class="command" id="socail">
+          <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
+          <span class="typing">Social-info</span>
+        </div>
+        <div class="output">
+          <span class="loading">Loading...</span>
+          <span>
+            <a href="https://www.linkedin.com/in/mohammed97ashraf/"><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-github"></i></a>
+            <a href=""><i class="bi bi-medium"></i></a>
+          </span>
+        </div>
+
+
+      <div class="command" id="experience">
+        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
+        <span class="typing">Experience</span>
+      </div>
+      <div class="output">
+        <span class="loading">Loading...</span>
+        <ol>
+          <li>Tech Lead at SalesSunday (2022 - Present):</li>
+          <ul>
+            <li>Implemented cutting-edge machine learning and LLM (Large language model) techniques to streamline sales and operations processes, resulting in a 30% increase in efficiency.</li>
+            <li>Collaborated closely with the sales and operations teams to identify pain points and design solutions that enhanced customer experience and optimized internal workflows.</li>
+            <li>Developed custom algorithms and models for sales forecasting, demand planning, and inventory optimization, leading to a 25% reduction in costs and improved inventory management.</li>
+            <li>Oversaw the integration of third-party APIs and tools to enhance platform functionality and extend its capabilities.</li>
+          </ul>
+          <li>Lead Machine Learning Engineer (2021 - 2022):</li>
+          <ul>
+            <li>Building the influencer discovery system: This system uses various data sources, including social media profiles, engagement rates, and audience demographics, to identify the best possible matches for a particular campaign.</li>
+            <li>Establishing an Efficient MLOps Pipeline: To optimize the performance and reliability of our influencer classification system, I have established a comprehensive MLOps pipeline.</li>
+            <li>Building a Robust Machine Learning Model API: This versatile API seamlessly integrates with web and mobile applications, empowering our users with accurate predictions and tailored recommendations based on our sophisticated machine-learning models.</li>
+            <li>Establishing an Efficient MLOps Pipeline: This encompasses ongoing monitoring and fine-tuning of machine learning models, automation of data collection and preprocessing tasks, and seamless deployment of the system at scale, guaranteeing its smooth and efficient operation.</li>
+            <li>Developing a High-Volume Web Scraper: I have engineered a robust web scraper capable of efficiently extracting data from a staggering 30,000 influencer profiles daily.</li>
+          </ul>
+          <li>Co-Founder at Frejourn.com</li>
+          <ul>
+            <li>led the development of the backend infrastructure for the Frejourn, ensuring robustness, scalability, and security to support its rapid growth.</li>
+            <li>Implemented a custom-built location-based algorithm that enhances user experience by providing tailored recommendations and personalized content based on user location data.</li>
+            <li>Designed and developed a recommendation system that utilizes machine learning techniques to analyze user preferences and behavior, resulting in a 20% increase in user engagement and retention.</li>
+            <li>Oversaw the integration of third-party APIs and services to enhance platform functionality, including payment gateways, social media integrations, and data analytics tools.</li>
+            <li>Managed a user base of 15,000 registered users, monitoring platform usage patterns and optimizing server resources to handle peak traffic periods efficiently.</li>
+            <li>Successfully scaled the platform to handle an average daily traffic of 5,000 users, ensuring uninterrupted service and a seamless user experience.</li>
+          </ul>
+        </ol>
+      </div>
+
+      <div class="command" id="education">
+        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
+        <span class="typing">Education</span>
+      </div>
+      <div class="output">
+        <span class="loading">Loading...</span>
+        <ul>
+          <li>Master of Science in Computer Science - REVA University (2018 - 2020)</li>
+          <li>Bachelor of Computer Application in Big Data Analytics (2015 - 2018)</li>
+        </ul>
+      </div>
+
+      <div class="command" id="skills">
+        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
+        <span class="typing">Skills</span>
+      </div>
+      <div class="output">
+        <span class="loading">Loading...</span>
+        <ul>
+          <li>Machine Learning</li>
+          <li>Python</li>
+          <li>TensorFlow</li>
+          <li>PyTorch</li>
+          <li>FastAPI</li>
+          <li>Flask</li>
+          <li>Backend Development</li>
+          <li>SQL</li>
+          <li>Git</li>
+        </ul>
+      </div>
+      
+      <div class="command" id="language">
+        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
+        <span class="typing">Language</span>
+      </div>
+      <div class="output">
+        <span class="loading">Loading...</span>
+        <ul>
+          <li>Hindi</li>
+          <li>English</li>
+          <li>Odia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#language">Language</a>
+    </div>
+  </div>
+
+  <script>
+    const commandElements = document.getElementsByClassName('command');
+    const outputElements = document.getElementsByClassName('output');
+    const terminalElement = document.querySelector('.terminal');
+    const navElement = document.querySelector('.nav');
+
+    // Simulate a time delay for each command
+    function showNextOutput(index) {
+      setTimeout(function () {
+        outputElements[index].style.display = 'block';
+        const loadingSpan = outputElements[index].querySelector('.loading');
+        loadingSpan.style.display = 'none';
+
+        if (index === outputElements.length - 1) {
+          navElement.style.display = 'flex';
+        }
+
+        // Scroll to the bottom of the terminal
+        terminalElement.scrollTop = terminalElement.scrollHeight;
+      }, (index + 1) * 2000); // Delay each output by 2 seconds
+
+      if (index < commandElements.length - 1) {
+        commandElements[index + 1].querySelector('.typing').classList.add('typing');
+        showNextOutput(index + 1);
+      }
+    }
+
+    // Start displaying the outputs
+    commandElements[0].querySelector('.typing').classList.add('typing');
+    showNextOutput(0);
+  </script>
+</body>
+
+</html>
