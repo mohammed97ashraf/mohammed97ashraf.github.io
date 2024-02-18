@@ -1,313 +1,334 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Mohammed Ashraf Resume</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <style>
-    body {
-      background-color: #000;
-      color: #0f0;
-      font-family: "Courier New", Courier, monospace;
-    }
-
-    .container {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .terminal {
-      border: 1px solid #0f0;
-      border-radius: 5px;
-      padding: 10px;
-      flex-grow: 1;
-      overflow: auto;
-    }
-
-    .command {
-      color: #0f0;
-      display: inline-block;
-    }
-
-    .output {
-      color: #fff;
-      margin-bottom: 10px;
-      display: none;
-    }
-
-    .prompt {
-      color: #0f0;
-    }
-
-    .path {
-      color: #00f;
-    }
-
-    .symbol {
-      color: #f00;
-    }
-
-    /* Typing effect animation */
-    .typing::after {
-      content: "|";
-      display: inline-block;
-      animation: cursor-animation 0.7s infinite;
-    }
-
-    @keyframes cursor-animation {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Loading effect animation */
-    .loading {
-      animation: loading-animation 1.5s infinite;
-    }
-
-    @keyframes loading-animation {
-      0% {
-        opacity: 0;
-      }
-
-      50% {
-        opacity: 0.5;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Navigation */
-    .nav {
-      margin-top: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      color: #0f0;
-      text-decoration: none;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-
-    .name {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .position {
-      text-align: center;
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .download-btn {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .download-btn a {
-      color: #0f0;
-      background-color: #000;
-      border: 1px solid #0f0;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .download-btn a:hover {
-      background-color: #0f0;
-      color: #000;
-    }
-  </style>
+  <title>Mohammed Ashraf - Full Stack ML Engineer</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container mt-5">
-    <h1 class="name">Mohammed Ashraf</h1>
-    <h3 class="position">Driving Innovation at the Intersection of ML and Backend Development</h3>
-    <div class="download-btn">
-      <a href="mohammedashraf_resume.pdf" download>Download Resume as PDF</a>
-    </div>
-    <br/>
-    <div class="terminal">
-      <div class="command" id="about">
-        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
-        <span class="typing">About-me</span>
-      </div>
-      <div class="output">
-        <span class="loading">Loading...</span>
-        <span>Seasoned machine learning and backend engineer with 4 years of experience in creating and deploying machine learning models, and designing scalable backend systems. Skilled in multiple programming languages and frameworks, including Python, TensorFlow, FastAPI, and Flask. Possesses a deep understanding of data structures, algorithms, and software design principles. Demonstrated ability to work both independently and collaboratively to deliver reliable software solutions.</span>
-      </div>
 
-      <div class="command" id="contact">
-          <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
-          <span class="typing">Contact-details</span>
-        </div>
-        <div class="output">
-          <span class="loading">Loading...</span>
-          <ul>
-            <li>Mail: Mohammed97ashraf@gmail.com</li>
-          </ul>
-        </div>
-
-        <div class="command" id="socail">
-          <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
-          <span class="typing">Social-info</span>
-        </div>
-        <div class="output">
-          <span class="loading">Loading...</span>
-          <span>
-            <a href="https://www.linkedin.com/in/mohammed97ashraf/" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/mohammed97ashraf" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="https://medium.com/@mohammed97ashraf" target="_blank"><i class="bi bi-medium"></i></a>
-            <a href="https://twitter.com/mdashraf333" target="_blank"><i class="bi bi-twitter"></i></i></a>
-            <a href="https://huggingface.co/mrSoul7766" target="_blank">&#129303</i></i></a>
-          </span>
-        </div>
-
-
-      <div class="command" id="experience">
-        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
-        <span class="typing">Experience</span>
-      </div>
-      <div class="output">
-        <span class="loading">Loading...</span>
-        <ol>
-          <li>Tech Lead at SalesSunday (2022 - Present):</li>
-          <ul>
-            <li>Implemented cutting-edge machine learning and LLM (Large language model) techniques to streamline sales and operations processes, resulting in a 30% increase in efficiency.</li>
-            <li>Collaborated closely with the sales and operations teams to identify pain points and design solutions that enhanced customer experience and optimized internal workflows.</li>
-            <li>Developed custom algorithms and models for sales forecasting, demand planning, and inventory optimization, leading to a 25% reduction in costs and improved inventory management.</li>
-            <li>Oversaw the integration of third-party APIs and tools to enhance platform functionality and extend its capabilities.</li>
-          </ul>
-          <li>Lead Machine Learning Engineer (2021 - 2022):</li>
-          <ul>
-            <li>Building the influencer discovery system: This system uses various data sources, including social media profiles, engagement rates, and audience demographics, to identify the best possible matches for a particular campaign.</li>
-            <li>Establishing an Efficient MLOps Pipeline: To optimize the performance and reliability of our influencer classification system, I have established a comprehensive MLOps pipeline.</li>
-            <li>Building a Robust Machine Learning Model API: This versatile API seamlessly integrates with web and mobile applications, empowering our users with accurate predictions and tailored recommendations based on our sophisticated machine-learning models.</li>
-            <li>Establishing an Efficient MLOps Pipeline: This encompasses ongoing monitoring and fine-tuning of machine learning models, automation of data collection and preprocessing tasks, and seamless deployment of the system at scale, guaranteeing its smooth and efficient operation.</li>
-            <li>Developing a High-Volume Web Scraper: I have engineered a robust web scraper capable of efficiently extracting data from a staggering 30,000 influencer profiles daily.</li>
-          </ul>
-          <li>Co-Founder at Frejourn.com</li>
-          <ul>
-            <li>led the development of the backend infrastructure for the Frejourn, ensuring robustness, scalability, and security to support its rapid growth.</li>
-            <li>Implemented a custom-built location-based algorithm that enhances user experience by providing tailored recommendations and personalized content based on user location data.</li>
-            <li>Designed and developed a recommendation system that utilizes machine learning techniques to analyze user preferences and behavior, resulting in a 20% increase in user engagement and retention.</li>
-            <li>Oversaw the integration of third-party APIs and services to enhance platform functionality, including payment gateways, social media integrations, and data analytics tools.</li>
-            <li>Managed a user base of 15,000 registered users, monitoring platform usage patterns and optimizing server resources to handle peak traffic periods efficiently.</li>
-            <li>Successfully scaled the platform to handle an average daily traffic of 5,000 users, ensuring uninterrupted service and a seamless user experience.</li>
-          </ul>
-        </ol>
-      </div>
-
-      <div class="command" id="education">
-        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
-        <span class="typing">Education</span>
-      </div>
-      <div class="output">
-        <span class="loading">Loading...</span>
-        <ul>
-          <li>Master of Science in Computer Science - REVA University (2018 - 2020)</li>
-          <li>Bachelor of Computer Application in Big Data Analytics (2015 - 2018)</li>
-        </ul>
-      </div>
-
-      <div class="command" id="skills">
-        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
-        <span class="typing">Skills</span>
-      </div>
-      <div class="output">
-        <span class="loading">Loading...</span>
-        <ul>
-          <li>Machine Learning</li>
-          <li>Python</li>
-          <li>TensorFlow</li>
-          <li>PyTorch</li>
-          <li>FastAPI</li>
-          <li>Flask</li>
-          <li>Backend Development</li>
-          <li>SQL</li>
-          <li>Git</li>
-        </ul>
-      </div>
-      
-      <div class="command" id="language">
-        <span class="path">Resume@Ashraf</span><span class="symbol">$</span>
-        <span class="typing">Language</span>
-      </div>
-      <div class="output">
-        <span class="loading">Loading...</span>
-        <ul>
-          <li>Hindi</li>
-          <li>English</li>
-          <li>Odia</li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mohammed Ashraf</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#social">Social</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
+  </nav>
 
-    <div class="nav">
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#language">Language</a>
+  <!-- Jumbotron -->
+  <section class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Hello, I'm Mohammed Ashraf</h1>
+      <p class="lead">Full Stack AI/ML Engineer</p>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row about-content animate-scale">
+        <div class="col-md-6">
+          <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/_48111f8c-7a54-42da-bc43-ef98c17f821f.jpeg" class="img-fluid about-image" alt="About Image">
+        </div>
+        <div class="col-md-6 about-text">
+          <h3>Let Me Introduce Myself</h3>
+          <p>I'm a Full Stack ML Engineer who stumbled into the world of machine learning out of sheer curiosity. 
+            I've become a Python wizard, conjuring up intelligent systems that could make Mary Shelley's Frankenstein look like a toy. 
+            I've dabbled in the dark arts of Large Language Models, crafting custom ones that even J.K. Rowling would envy. 
+            Oh, and I can manage big data like a pro, slicing and dicing it to uncover hidden gems. In short, I'm a mad scientist of ML with a penchant for pushing boundaries.</p>
+          <p>When I'm not coding, you can catch me tearing up the roads on my motorcycle like a madman or smashing boundaries on the cricket field. 
+            And when I'm not living life in the fast lane, you'll find me immersing myself in the latest AI breakthroughs, hiking through nature's wonders, or simply enjoying a cup of freshly brewed coffee while contemplating the mysteries of the universe.</p>
+          <p>Feel free to <a href="#contact">reach out</a> if you'd like to collaborate on a project or just want to chat about all things tech!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="slider">
+        <div class="slide">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <i class="fab fa-python skill-icon"></i>
+              <p>Python</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <i class="fab fa-js skill-icon"></i>
+              <p>JavaScript</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <i class="fab fa-aws skill-icon"></i>
+              <p>AWS</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more slides for additional skills -->
+        <div class="slide">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <i class="mdi mdi-flask skill-icon"></i>
+              <p>Flask</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <i class="fab fa-docker skill-icon"></i>
+              <p>Docker</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <i class="mdi mdi-lightning-bolt-circle skill-icon"></i>
+              <p>FastAPI</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more slides for additional skills -->
+        <div class="slide">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <i class="mdi mdi-kubernetes skill-icon"></i>
+              <p>MLops</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <i class="mdi mdi-elephant skill-icon"></i>
+              <p>Hadoop</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <i class="mdi mdi-database-search skill-icon"></i>
+              <p>NoSql</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience -->
+<section id="experience" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-timeline">
+        <div class="experience-timeline-item">
+          <div class="timeline-icon">1</div>
+          <div class="timeline-content">
+            <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/zzyragroup_logo.jpeg" alt="Company Logo" class="img-fluid mb-2" style="max-width: 100px;">
+            <h4>Co-founder</h4>
+            <h6>2019-2021</h6>
+            <p>Led backend infrastructure development for Frejourn, ensuring scalability, security, and rapid growth support.
+               Implemented location-based algorithm for tailored recommendations, driving user engagement. 
+               Oversaw API integration, user base management, and platform scaling for seamless service.</p>
+          </div>
+        </div>
+        <div class="experience-timeline-item">
+          <div class="timeline-icon">2</div> <!-- Added blink-animation class to the timeline-icon div -->
+          <div class="timeline-content">
+            <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/wobbhq_logo.jpeg" alt="Company Logo" class="img-fluid mb-2" style="max-width: 100px;">
+            <h4>Lead Machine Learning Engineer</h4>
+            <h6>2021-2022</h6>
+            <p>Developed ML algorithms for influencer discovery and classification, while leading a team in building a scalable API with a multimodal influencer classifier.</p>
+          </div>
+        </div>
+        <!-- Add more experience items -->
+        <div class="experience-timeline-item">
+          <div class="timeline-icon">3</div> <!-- Added blink-animation class to the timeline-icon div -->
+          <div class="timeline-content">
+            <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/1659008401771.jpeg" alt="Company Logo" class="img-fluid mb-2" style="max-width: 100px;">
+            <h4>Chief Technology Officer</h4>
+            <h6>2022-2023</h6>
+            <p>Implemented cutting-edge machine learning techniques to streamline sales and operations, including the development of custom audio models for call transcription and summarization, resulting in a 30% increase in efficiency. 
+              Integrated real-time assistance using open APIs and Large Language Models (LLM), collaborated with teams to optimize workflows, and developed custom algorithms for forecasting and inventory management, reducing costs by 25%. Oversaw the integration of third-party APIs for enhanced platform functionality.</p>
+          </div>
+        </div>
+        <div class="experience-timeline-item">
+          <div class="timeline-icon blink-animation">4</div> <!-- Added blink-animation class to the timeline-icon div -->
+          <div class="timeline-content">
+            <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/kapturecrm_logo.jpeg" alt="Company Logo" class="img-fluid mb-2" style="max-width: 100px;">
+            <h4>Machine Learning Engineer</h4>
+            <h6>2023-present</h6>
+            <p>Developed custom knowledge bases for Language Learning Models (LLMs) to assist support agents, implemented Retrieval-Augmented Generation (RAG) systems for policy-based support suggestions, and introduced image processing for product identification and automated expiry date detection, reducing workload. Additionally, created RAG-based LLM-powered conversational chatbots capable of building conversational interfaces from website URLs, and built a custom profanity detection language model.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="portfolio-item">
+            <img src="project-image.jpg" class="img-fluid" alt="Project Image">
+            <h4>Project Name</h4>
+            <p>Brief description of the project.</p>
+          </div>
+        </div>
+        <!-- Add more projects -->
+      </div>
+    </div>
+  </section>
+
+<!-- Social -->
+<section id="social" class="section bg-light">
+  <div class="container">
+    <h2 class="section-title">Social</h2>
+    <div class="row">
+      <div class="col-md mb-4 text-center">
+        <a href="https://twitter.com/mdashraf333" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+        <p>Twitter</p>
+      </div>
+      <div class="col-md mb-4 text-center">
+        <a href="https://www.linkedin.com/in/mohammed97ashraf" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <p>LinkedIn</p>
+      </div>
+      <div class="col-md mb-4 text-center">
+        <a href="https://github.com/mohammed97ashraf" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+        <p>GitHub</p>
+      </div>
+      <div class="col-md mb-4 text-center">
+        <a href="https://huggingface.co/mrSoul7766" class="social-icon" target="_blank">🤗</a>
+        <p>Huggingface</p>
+      </div>
+      <div class="col-md mb-4 text-center">
+        <a href="https://medium.com/@mohammed97ashraf" class="social-icon" target="_blank">
+          <svg width="50px" height="50px" viewBox="0 -55 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+            <g>
+              <path d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z" fill="#000000"></path>
+            </g>
+          </svg>
+        </a>
+        <p>Medium</p>
+      </div>
+      <!-- Add more social links -->
     </div>
   </div>
+</section>
 
+
+ <!-- Blog -->
+<section id="blog" class="section">
+  <div class="container">
+    <h2 class="section-title">Blog</h2>
+    <!-- Add banner image here -->
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="blog-card">
+          <!-- Banner image inside the card -->
+          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*iYXL8-DUmBv3iiF6kxYVhA.jpeg" class="img-fluid" alt="Banner Image 1">
+          <h3>Unleashing the Potential of Gemini Pro with Langchain: A Quick Guide to Mastering Langchain and Gemini Pro</h3>
+          <p>This guide delves into the recently launched Gemini API, conducting a practical test. It concludes with a step-by-step tutorial on how to use the Gemini chat model with Langchain.</p>
+          <a href="https://medium.com/@mohammed97ashraf/unleashing-the-potential-of-gemini-pro-with-langchain-a-quick-guide-to-mastering-langchain-and-a7fb99d0e77a" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="blog-card">
+          <!-- Banner image inside the card -->
+          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*qHg4XcdjKhIrR9a1Ahm3KA.jpeg" class="img-fluid" alt="Banner Image 2">
+          <h3>A Guide to Building a Semi-Structured Image Retrieval System with Gemini Vision and LlamaIndex</h3>
+          <p>Semi-structured Image Retrieval is a method of searching through images that allows for more specific and complex queries than traditional image retrieval methods. Traditional image retrieval systems typically rely on keyword tags or visual features to search for images, while Semi-structured Image Retrieval also takes into account the spatial relationship between objects in an image. This allows for more precise and comprehensive image retrieval results.</p>
+          <a href="https://medium.com/@mohammed97ashraf/a-guide-to-building-a-semi-structured-image-retrieval-system-with-gemini-vision-and-llamaindex-a9037bc29b3d" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="blog-card">
+          <!-- Banner image inside the card -->
+          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*TSGDVSaeHxWEZdmVn61AbQ.png" class="img-fluid" alt="Banner Image 2">
+          <h3>Creating Your Custom Chatbot: Unleashing the Power of OpenAI API and HuggingFace for Text and Voice Interactions</h3>
+          <p>Gone are the days of one-size-fits-all chatbots that lack personalization and fail to engage users effectively. Today, we have the opportunity to create chatbots that truly understand and connect with their audience. With OpenAI API, we can tap into the state-of-the-art language model, allowing our chatbot to comprehend natural language inputs, provide accurate responses, and even hold dynamic conversations with users.</p>
+          <a href="https://medium.com/@mohammed97ashraf/a-guide-to-building-a-semi-structured-image-retrieval-system-with-gemini-vision-and-llamaindex-a9037bc29b3d" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    <center><button type="button" class="btn btn-primary"><a href="https://medium.com/@mohammed97ashraf" target="_blank" style="color:aliceblue;"><p>Read More Of My Blogs  </p></a></button></center>
+  </div>
+</section>
+
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-3">
+    <div class="container text-center">
+      <p>&copy; 2024 Mohammed Ashraf</p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-    const commandElements = document.getElementsByClassName('command');
-    const outputElements = document.getElementsByClassName('output');
-    const terminalElement = document.querySelector('.terminal');
-    const navElement = document.querySelector('.nav');
+    $(document).ready(function(){
+      // Skill Slider
+      var slideIndex = 0;
+      showSlides();
 
-    // Simulate a time delay for each command
-    function showNextOutput(index) {
-      setTimeout(function () {
-        outputElements[index].style.display = 'block';
-        const loadingSpan = outputElements[index].querySelector('.loading');
-        loadingSpan.style.display = 'none';
-
-        if (index === outputElements.length - 1) {
-          navElement.style.display = 'flex';
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
         }
-
-        // Scroll to the bottom of the terminal
-        terminalElement.scrollTop = terminalElement.scrollHeight;
-      }, (index + 1) * 2000); // Delay each output by 2 seconds
-
-      if (index < commandElements.length - 1) {
-        commandElements[index + 1].querySelector('.typing').classList.add('typing');
-        showNextOutput(index + 1);
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
       }
-    }
-
-    // Start displaying the outputs
-    commandElements[0].querySelector('.typing').classList.add('typing');
-    showNextOutput(0);
+    });
   </script>
 </body>
-
 </html>
