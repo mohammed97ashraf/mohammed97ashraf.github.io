@@ -289,3 +289,14 @@ body {
 .blog-card .btn {
   align-self: flex-end;
 }
+
+/* Add text effect */
+.text-effect {
+  color: transparent; /* Make text transparent */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), /* White shadow */
+               0 0 10px rgba(255, 0, 0, 0.5), /* Red shadow */
+               0 0 15px rgba(255, 255, 0, 0.5), /* Yellow shadow */
+               0 0 20px rgba(0, 255, 0, 0.5), /* Green shadow */
+               0 0 25px rgba(0, 0, 255, 0.5); /* Blue shadow */
+}
+
