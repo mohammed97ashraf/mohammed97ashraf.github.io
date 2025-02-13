@@ -1,381 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammed Ashraf - Full Stack ML Engineer</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Ashraf - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Mohammed Ashraf</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#social">Social</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
     </div>
-  </nav>
 
-  <!-- Jumbotron -->
-  <section class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Hello, I'm Mohammed Ashraf</h1>
-      <p class="lead ">Full Stack AI/ML Engineer</p>
-    </div>
-  </section>
-
-  <!-- About Me -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="row about-content animate-scale">
-        <div class="col-md-6">
-          <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/_48111f8c-7a54-42da-bc43-ef98c17f821f.jpeg" class="img-fluid about-image" alt="About Image">
-        </div>
-        <div class="col-md-6 about-text">
-          <h3>Let Me Introduce Myself</h3>
-          <p>I'm a Full Stack ML Engineer who stumbled into the world of machine learning out of sheer curiosity. 
-            I've become a Python wizard, conjuring up intelligent systems that could make Mary Shelley's Frankenstein look like a toy. 
-            I've dabbled in the dark arts of Large Language Models, crafting custom ones that even J.K. Rowling would envy. 
-            Oh, and I can manage big data like a pro, slicing and dicing it to uncover hidden gems. In short, I'm a mad scientist of ML with a penchant for pushing boundaries.</p>
-          <p>When I'm not coding, you can catch me tearing up the roads on my motorcycle like a madman or smashing boundaries on the cricket field. 
-            And when I'm not living life in the fast lane, you'll find me immersing myself in the latest AI breakthroughs, hiking through nature's wonders, or simply enjoying a cup of freshly brewed coffee while contemplating the mysteries of the universe.</p>
-          <p>Feel free to <a href="#contact">reach out</a> if you'd like to collaborate on a project or just want to chat about all things tech!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  
-  <section id="skills" class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="slider">
-        <div class="slide">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <i class="fab fa-python skill-icon"></i>
-              <p>Python</p>
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Mohammed Ashraf</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-              <i class="fab fa-js skill-icon"></i>
-              <p>JavaScript</p>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="container text-center">
+                <h1 class="mb-4">Mohammed Ashraf</h1>
+                <h2 class="mb-4">I'm a <span class="typed-text"></span></h2>
+                <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
             </div>
-            <div class="col-md-4 text-center">
-              <i class="fab fa-aws skill-icon"></i>
-              <p>AWS</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="text-center section-title">About Me</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="https://raw.githubusercontent.com/mohammed97ashraf/mohammed97ashraf.github.io/main/WhatsApp%20Image%202024-03-02%20at%2018.00.49_86568f6f.jpg" alt="Profile" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Hello! I'm Mohammed Ashraf</h3>
+                        <p>I'm a Machine Learning Engineer with over 6 years of experience specializing in Generative AI, LLMs, and Agentic AI. I'm passionate about building scalable, high-impact AI solutions, particularly in fast-paced startup environments. I have a strong background in developing and deploying real-time applications, RAG-powered chatbots, and voice agents. My expertise includes fine-tuning foundational models for domain-specific tasks and leading teams to deliver successful projects.</p>
+                        <a href="YOUR_CV_LINK" class="btn btn-outline-primary" target="_blank">Download CV</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- Add more slides for additional skills -->
-        <div class="slide">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <i class="mdi mdi-flask skill-icon"></i>
-              <p>Flask</p>
+        </section>
+
+       <!-- Skills Section -->
+       <section id="skills">
+        <div class="container">
+            <h2 class="text-center section-title">My Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-brain fa-3x mb-3"></i>
+                        <h4>Machine Learning</h4>
+                        <p>Deep Learning, Model Training, Evaluation</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-code fa-3x mb-3"></i>
+                        <h4>Python</h4>
+                        <p>Expert in Python programming</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-flask fa-3x mb-3"></i>
+                        <h4>Flask</h4>
+                        <p>Web application development</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-pen-nib fa-3x mb-3"></i>
+                        <h4>Prompt Engineering</h4>
+                        <p>Crafting effective prompts for LLMs</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-cogs fa-3x mb-3"></i>
+                        <h4>Hugging Face Transformers</h4>
+                        <p>Working with transformer models</p>
+                    </div>
+                </div>
+                 <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-cogs fa-3x mb-3"></i>
+                        <h4>LLMOps</h4>
+                        <p>Working with LLMOps</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-comments fa-3x mb-3"></i>
+                        <h4>Natural Language Processing</h4>
+                        <p>NLP techniques and applications</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-rocket fa-3x mb-3"></i>
+                        <h4>FastAPI</h4>
+                        <p>Building high-performance APIs</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-robot fa-3x mb-3"></i>
+                        <h4>Generative AI</h4>
+                        <p>Developing generative models</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-link fa-3x mb-3"></i>
+                        <h4>LangChain</h4>
+                        <p>Building applications with LLMs</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fab fa-aws fa-3x mb-3"></i>
+                        <h4>AWS</h4>
+                        <p>Cloud computing services</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fas fa-user-tie fa-3x mb-3"></i>
+                        <h4>AgentOps</h4>
+                        <p>Agent operations and management</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fa-brands fa-js fa-3x mb-3"></i>
+                        <h4>JQuery</h4>
+                        <p>Interactive User Interface</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fa-brands fa-bootstrap fa-3x mb-3"></i>
+                        <h4>Bootstrap</h4>
+                        <p>Interactive User Interface</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item text-center">
+                        <i class="fa-solid fa-database fa-3x mb-3"></i>
+                        <h4>MogoDB</h4>
+                        <p>NoSQL DataBase</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-              <i class="fab fa-docker skill-icon"></i>
-              <p>Docker</p>
+        </div>
+    </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="text-center section-title">My Projects</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card project-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Odia T5-Based Model for NLP Tasks</h5>
+                                <p class="card-text">Developed a T5-based model for NLP tasks in the Odia language, including question answering, summarization, and translation. Trained on the mT5 architecture.</p>
+                                <a href="https://huggingface.co/mrSoul7766/odia-t5-base" class="btn btn-outline-primary" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card project-card">
+                            <div class="card-body">
+                                <h5 class="card-title">AgriQBot</h5>
+                                <p class="card-text">Fine-tuned a FLAN-T5 model for question answering with a custom dataset, achieving a BLEU score of 0.86.</p>
+                                <a href="https://huggingface.co/mrSoul7766/AgriQBott" class="btn btn-outline-primary" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card project-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Fine-Tuned Gemma 2B for Python Code Generation</h5>
+                                <p class="card-text">Fine-tuned the Google Gemma 2B Instruct model for precise Python code generation from natural language instructions.</p>
+                                 <a href="https://huggingface.co/mrSoul7766/gemma-2b-it-python-code-gen-adapter" class="btn btn-outline-primary" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card project-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Real-Time AI Telephony Sales Agent</h5>
+                                <p class="card-text">Developed an AI-powered real-time sales agent with Twilio integration, using Groq and Deepgram for efficient speech recognition and NLP.</p>
+                                <a href="https://github.com/mohammed97ashraf/telephony_sales_agent" class="btn btn-outline-primary" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card project-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Building a Voice-Enabled AI Agent for Text-to-SQL Queries with LangGraph</h5>
+                                <p class="card-text">This project bridges the gap between non-technical users and databases by building a voice-enabled AI agent that translates natural language (text and speech) into SQL queries</p>
+                                <a href="https://github.com/mohammed97ashraf/NL2SQL-Agent" class="btn btn-outline-primary" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card project-card">
+                            <div class="card-body">
+                                <h5 class="card-title">CSV To Conversational Chat Bot</h5>
+                                <p class="card-text">Chat-React-CSV-Bot is a sophisticated conversational agent engineered with OpenAI's GPT-3.5 model and React agent. This project integrates natural language processing capabilities to develop a chatbot adept at comprehending and generating responses to user inquiries.</p>
+                                <a href="https://github.com/mohammed97ashraf/NL2SQL-Agent" class="btn btn-outline-primary" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-              <i class="mdi mdi-lightning-bolt-circle skill-icon"></i>
-              <p>FastAPI</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <h2 class="text-center section-title">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">11/2024 - Current</div>
+                        <div class="timeline-content">
+                            <h3>Senior Data Scientist</h3>
+                            <h4 class="company">MResult - Bengaluru, India</h4>
+                            <p>Developed a Gen AI project management tool integrated with Jira, optimizing prompt engineering and automating document generation.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">08/2023 - 11/2024</div>
+                        <div class="timeline-content">
+                            <h3>Senior Machine Learning Engineer</h3>
+                            <h4 class="company">Kapture CX - Bengaluru, Karnataka, India</h4>
+                            <p>Engineered a multilingual chatbot, implemented an Agentic RAG KMS, and developed an NLQ dashboard, significantly improving support efficiency.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">07/2022 - 08/2023</div>
+                        <div class="timeline-content">
+                            <h3>Chief Technology Officer</h3>
+                            <h4 class="company">Sales Sunday – Gurugram, Haryana, India</h4>
+                            <p>Implemented AI-based QA and script generation, boosting lead conversion and reducing costs.  Created a RAG-based KMS for real-time support.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">09/2021 - 05/2022</div>
+                        <div class="timeline-content">
+                            <h3>Lead Machine Learning Engineer</h3>
+                            <h4 class="company">Wobb - Gurugram, Haryana, India</h4>
+                            <p>Developed a multimodal classification model, implemented an influencer discovery algorithm, and designed a data pipeline for campaign analysis.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">01/2019 - 06/2021</div>
+                        <div class="timeline-content">
+                            <h3>Co-Founder</h3>
+                            <h4 class="company">Frejourn - Bangalore, Karnataka, India</h4>
+                            <p>Led backend development, implemented personalization algorithms, integrated APIs, and participated in Y Combinator and Newchip accelerators.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- Add more slides for additional skills -->
-        <div class="slide">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <i class="mdi mdi-kubernetes skill-icon"></i>
-              <p>MLops</p>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <div class="container">
+                <h2 class="text-center section-title">Blog's</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card blog-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Building a Retrieval-Augmented Generation (RAG) Model with Gemma and Langchain: A Step-by-Step Guide</h5>
+                                <p class="card-text">Learn how to create powerful RAG models using Gemma and Langchain in easy steps! This guide helps you build advanced text generation systems effortlessly.</p>
+                                <a href="https://medium.com/@mohammed97ashraf/building-a-retrieval-augmented-generation-rag-model-with-gemma-and-langchain-a-step-by-step-f917fc6f753f" class="btn btn-outline-primary" target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card blog-card">
+                            <div class="card-body">
+                                <h5 class="card-title">From Manual to Automated: The Future of Web Scraping with LLM</h5>
+                                <p class="card-text">In web scraping, the main challenge has always been the manual effort required.However, those days are behind us. With the advent of Large Language Models (LLMs) equipped with vision capabilities, we can now create nearly universal web scraping agents, significantly simplifying and automating the process.</p>
+                                <a href="https://medium.com/@mohammed97ashraf/from-manual-to-automated-the-future-of-web-scraping-with-llm-97b04ce93476" class="btn btn-outline-primary" target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card blog-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">How to Generate Structured Outputs with Google’s Gemini API: A Comprehensive Guide</h5>
+                                    <p class="card-text">This blog highlights the growing importance of generating structured JSON outputs in AI and introduces Google’s Gemini API as a versatile tool for creating structured data from text, images, or multimodal inputs.</p>
+                                    <a href="https://medium.com/@mohammed97ashraf/how-to-generate-structured-outputs-with-googles-gemini-api-a-comprehensive-guide-384421650e21" class="btn btn-outline-primary" target="_blank">Read More</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card blog-card">
+                            <div class="card-body">
+                                <h5 class="card-title">A Guide to Supervised Fine-Tuning and 4-Bit Quantization for Language Models, Pushed to the Hugging Face Model Hub</h5>
+                                <p class="card-text">This blog post focuses on saving and pushing your fine-tuned model to the Hugging Face Model Hub, offering practical tips to overcome common challenges, especially with quantized models, ensuring easy accessibility for the community.</p>
+                                <a href="https://medium.com/@mohammed97ashraf/a-guide-to-supervised-fine-tuning-and-4-bit-quantization-for-language-models-pushed-to-the-hugging-8c921469d949" class="btn btn-outline-primary" target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-              <i class="mdi mdi-elephant skill-icon"></i>
-              <p>Hadoop</p>
             </div>
-            <div class="col-md-4 text-center">
-              <i class="mdi mdi-database-search skill-icon"></i>
-              <p>NoSql</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="text-center section-title">Get In Touch</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <p><i class="fas fa-envelope me-2"></i> Mohammed97ashraf@gmail.com</p>
+                            <p><i class="fas fa-phone me-2"></i> +91 9591356915</p>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> Bangalore, India 560077</p>
+                            <div class="social-links mt-4">
+                                <a href="https://github.com/mohammed97ashraf" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/mohammed97ashraf/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                 <a href="https://medium.com/@mohammed97ashraf" target="_blank"><i class="fab fa-medium"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-4 text-center">
+            <p>© 2024 Mohammed Ashraf. All rights reserved.</p>
+        </footer>
     </div>
-  </section>
-  
-  <!-- Experience -->
-<section id="experience" class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="experience-timeline">
-        <div class="experience-timeline-item">
-          <div class="timeline-icon">1</div>
-          <div class="timeline-content">
-            <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/zzyragroup_logo.jpeg" alt="Company Logo" class="img-fluid mb-2" style="max-width: 100px;">
-            <h4>Co-founder</h4>
-            <h6>2019-2021</h6>
-            <p>Led backend infrastructure development for Frejourn, ensuring scalability, security, and rapid growth support.
-               Implemented location-based algorithm for tailored recommendations, driving user engagement. 
-               Oversaw API integration, user base management, and platform scaling for seamless service.</p>
-          </div>
-        </div>
-        <div class="experience-timeline-item">
-          <div class="timeline-icon">2</div> <!-- Added blink-animation class to the timeline-icon div -->
-          <div class="timeline-content">
-            <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/wobbhq_logo.jpeg" alt="Company Logo" class="img-fluid mb-2" style="max-width: 100px;">
-            <h4>Lead Machine Learning Engineer</h4>
-            <h6>2021-2022</h6>
-            <p>Developed ML algorithms for influencer discovery and classification, while leading a team in building a scalable API with a multimodal influencer classifier.</p>
-          </div>
-        </div>
-        <!-- Add more experience items -->
-        <div class="experience-timeline-item">
-          <div class="timeline-icon">3</div> <!-- Added blink-animation class to the timeline-icon div -->
-          <div class="timeline-content">
-            <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/1659008401771.jpeg" alt="Company Logo" class="img-fluid mb-2" style="max-width: 100px;">
-            <h4>Chief Technology Officer</h4>
-            <h6>2022-2023</h6>
-            <p>Implemented cutting-edge machine learning techniques to streamline sales and operations, including the development of custom audio models for call transcription and summarization, resulting in a 30% increase in efficiency. 
-              Integrated real-time assistance using open APIs and Large Language Models (LLM), collaborated with teams to optimize workflows, and developed custom algorithms for forecasting and inventory management, reducing costs by 25%. Oversaw the integration of third-party APIs for enhanced platform functionality.</p>
-          </div>
-        </div>
-        <div class="experience-timeline-item">
-          <div class="timeline-icon blink-animation">4</div> <!-- Added blink-animation class to the timeline-icon div -->
-          <div class="timeline-content">
-            <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/kapturecrm_logo.jpeg" alt="Company Logo" class="img-fluid mb-2" style="max-width: 100px;">
-            <h4>Machine Learning Engineer</h4>
-            <h6>2023-present</h6>
-            <p>Developed custom knowledge bases for Language Learning Models (LLMs) to assist support agents, implemented Retrieval-Augmented Generation (RAG) systems for policy-based support suggestions, and introduced image processing for product identification and automated expiry date detection, reducing workload. Additionally, created RAG-based LLM-powered conversational chatbots capable of building conversational interfaces from website URLs, and built a custom profanity detection language model.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Projects -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2 class="section-title">Projects</h2>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="portfolio-item h-100">
-          <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my-test-data/Odia+T5.png" class="img-fluid" alt="Project Image">
-          <h4>Odia T5 Base Model For NLP Task In Odia Language</h4>
-          <p>A powerful multilingual Text-To-Text Transfer Transformer specifically tailored for Odia language tasks. 
-            This model excels in various functionalities including English to Odia translation, Hindi to Odia translation,
-            Odia sentence summarization, Odia question answering, and context-based question answering.
-            Unlocking seamless communication and comprehension in the Odia language.</p>
-          <a href="https://huggingface.co/mrSoul7766/odia-t5-base" class="btn btn-primary" target="_blank">View</a>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="portfolio-item h-100">
-          <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/_fc1aa214-dc8e-4e31-8029-fcd6dec28e41.jpeg" class="img-fluid" alt="Project Image">
-          <h4>Small Language Model For Agriculture</h4>
-          <p>Meet AgriQBot 🌾🤖: Pioneering the exploration into agricultural knowledge! 🚜🌱 Now in its initial testing stage, AgriQBot emerges as a versatile small language model designed specifically for agricultural pursuits. 🌍🌾 As we sow the seeds of insight, data generation is in progress, with a steadfast commitment to ongoing enhancements.
-             🔄💡 The ultimate goal? To cultivate a compact yet formidable model enriched by a top-tier dataset, poised for direct task optimization in the days ahead.</p>
-          <a href="https://huggingface.co/mrSoul7766/AgriQBot" class="btn btn-primary" target="_blank">View</a>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="portfolio-item h-100">
-          <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/Screenshot+2023-10-14+013428.png" class="img-fluid" alt="Project Image">
-          <h4>Image To Instagram Caption</h4>
-          <p>Introducing my fine-tuned git-base model, specialized in crafting captivating Instagram-style captions. Embark on an innovative journey as it reshapes caption generation, unlocking creative potential within each image. Explore its possibilities on Hugging Face and share your experiences!</p>
-          <a href="https://huggingface.co/mrSoul7766/git-base-instagram-cap" class="btn btn-primary" target="_blank">View</a>
-        </div>
-      </div>
-      <!-- Add more projects -->
-    </div>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="portfolio-item h-100">
-          <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/sa.png" class="img-fluid" alt="Project Image">
-          <h4>Conversational form bots </h4>
-          <p>Delivering conversational form bots tailored for seamless new user registration experiences! Streamline the onboarding process with intuitive conversational interfaces, simplifying user interactions and enhancing engagement. 
-            Revolutionize registration workflows with our innovative solution, designed to optimize user experience and drive efficiency..</p>
-          <a href="https://www.linkedin.com/posts/mohammed97ashraf_signupandlaughchallenge-innovationinprogress-activity-7150238514062708736-a05u?utm_source=share&utm_medium=member_desktop" class="btn btn-primary" target="_blank">View</a>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="portfolio-item h-100">
-          <img src="https://adaptiverecs-web.s3.ap-south-1.amazonaws.com/my_web/1698173833790.jpeg" class="img-fluid" alt="Project Image">
-          <h4>Conversational Telephony Bot for Doctor Appointment Bookings</h4>
-          <p>Introducing our cutting-edge conversational chatbot for doctor appointment bookings! Leveraging the synergy of Langchain agents and GPT-3.5, we've crafted an intelligent solution seamlessly integrated with Twilio Voice for unparalleled functionality. Simplify appointment scheduling with natural language interactions,
-             ensuring a seamless and efficient booking process. Experience the future of healthcare coordination with our innovative platform.</p>
-          <a href="https://www.linkedin.com/posts/mohammed97ashraf_chatbots-langchain-gpt3-activity-7122657439874748417-Qzt8?utm_source=share&utm_medium=member_desktop" class="btn btn-primary" target="_blank">View</a>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="portfolio-item h-100">
-          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*TSGDVSaeHxWEZdmVn61AbQ.png" class="img-fluid" alt="Project Image">
-          <h4>LLM Powered Text and Voice Based Chatbot For Agriculture</h4>
-          <p>Gone are the days of one-size-fits-all chatbots that lack personalization and fail to engage users effectively. Today, we have the opportunity to create chatbots that truly understand and connect with their audience. With OpenAI API, we can tap into the state-of-the-art language model, 
-            allowing our chatbot to comprehend natural language inputs, provide accurate responses, and even hold dynamic conversations with users.</p>
-          <a href="https://www.linkedin.com/posts/mohammed97ashraf_chatbots-langchain-gpt3-activity-7122657439874748417-Qzt8?utm_source=share&utm_medium=member_desktop" class="btn btn-primary" target="_blank">View</a>
-        </div>
-      </div>
-      <!-- Add more projects -->
-    </div>
-  </div>
-</section>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        $(window).on('load', function() {
+            setTimeout(function() {
+                $('.loader-wrapper').fadeOut('slow', function() {
+                    $(this).remove();
+                    $('.content').addClass('visible');
+                });
+            }, 2000);
+        });
 
-<!-- Social -->
-<section id="social" class="section bg-light">
-  <div class="container">
-    <h2 class="section-title">Social</h2>
-    <div class="row">
-      <div class="col-md mb-4 text-center">
-        <a href="https://twitter.com/mdashraf333" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-        <p>Twitter</p>
-      </div>
-      <div class="col-md mb-4 text-center">
-        <a href="https://www.linkedin.com/in/mohammed97ashraf" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <p>LinkedIn</p>
-      </div>
-      <div class="col-md mb-4 text-center">
-        <a href="https://github.com/mohammed97ashraf" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-        <p>GitHub</p>
-      </div>
-      <div class="col-md mb-4 text-center">
-        <a href="https://huggingface.co/mrSoul7766" class="social-icon" target="_blank">🤗</a>
-        <p>Huggingface</p>
-      </div>
-      <div class="col-md mb-4 text-center">
-        <a href="https://medium.com/@mohammed97ashraf" class="social-icon" target="_blank">
-          <svg width="50px" height="50px" viewBox="0 -55 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
-            <g>
-              <path d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z" fill="#000000"></path>
-            </g>
-          </svg>
-        </a>
-        <p>Medium</p>
-      </div>
-      <!-- Add more social links -->
-    </div>
-  </div>
-</section>
+        // Typing effect
+        const texts = ['Machine Learning Engineer', 'AI Enthusiast', 'Developer']; // Updated texts
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
 
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
 
- <!-- Blog -->
-<section id="blog" class="section">
-  <div class="container">
-    <h2 class="section-title">Blog</h2>
-    <!-- Add banner image here -->
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="blog-card">
-          <!-- Banner image inside the card -->
-          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*iYXL8-DUmBv3iiF6kxYVhA.jpeg" class="img-fluid" alt="Banner Image 1">
-          <h3>Unleashing the Potential of Gemini Pro with Langchain: A Quick Guide to Mastering Langchain and Gemini Pro</h3>
-          <p>This guide delves into the recently launched Gemini API, conducting a practical test. It concludes with a step-by-step tutorial on how to use the Gemini chat model with Langchain.</p>
-          <a href="https://medium.com/@mohammed97ashraf/unleashing-the-potential-of-gemini-pro-with-langchain-a-quick-guide-to-mastering-langchain-and-a7fb99d0e77a" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="blog-card">
-          <!-- Banner image inside the card -->
-          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*qHg4XcdjKhIrR9a1Ahm3KA.jpeg" class="img-fluid" alt="Banner Image 2">
-          <h3>A Guide to Building a Semi-Structured Image Retrieval System with Gemini Vision and LlamaIndex</h3>
-          <p>Semi-structured Image Retrieval is a method of searching through images that allows for more specific and complex queries than traditional image retrieval methods. Traditional image retrieval systems typically rely on keyword tags or visual features to search for images, while Semi-structured Image Retrieval also takes into account the spatial relationship between objects in an image. This allows for more precise and comprehensive image retrieval results.</p>
-          <a href="https://medium.com/@mohammed97ashraf/a-guide-to-building-a-semi-structured-image-retrieval-system-with-gemini-vision-and-llamaindex-a9037bc29b3d" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="blog-card">
-          <!-- Banner image inside the card -->
-          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*TSGDVSaeHxWEZdmVn61AbQ.png" class="img-fluid" alt="Banner Image 2">
-          <h3>Creating Your Custom Chatbot: Unleashing the Power of OpenAI API and HuggingFace for Text and Voice Interactions</h3>
-          <p>Gone are the days of one-size-fits-all chatbots that lack personalization and fail to engage users effectively. Today, we have the opportunity to create chatbots that truly understand and connect with their audience. With OpenAI API, we can tap into the state-of-the-art language model, allowing our chatbot to comprehend natural language inputs, provide accurate responses, and even hold dynamic conversations with users.</p>
-          <a href="https://medium.com/@mohammed97ashraf/a-guide-to-building-a-semi-structured-image-retrieval-system-with-gemini-vision-and-llamaindex-a9037bc29b3d" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-    </div>
-    <center><button type="button" class="btn btn-primary"><a href="https://medium.com/@mohammed97ashraf" target="_blank" style="color:aliceblue;"><p>Read More Of My Blogs  </p></a></button></center>
-  </div>
-</section>
+            $('.typed-text').text(letter);
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        }());
 
+        // Smooth scrolling
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate(
+                {
+                    scrollTop: $($(this).attr('href')).offset().top - 70,
+                },
+                500,
+                'linear'
+            );
+        });
 
+        // Navbar active state
+        $(window).on('scroll', function() {
+            let position = $(this).scrollTop();
+            $('section').each(function() {
+                let target = $(this).offset().top - 200;
+                let id = $(this).attr('id');
+                if (position >= target) {
+                    $('.navbar-nav .nav-link').removeClass('active');
+                    $('.navbar-nav .nav-link[href="#' + id + '"]').addClass('active');
+                }
+            });
+        });
 
+        // 3D Galaxy Particle System with Mouse Repel
+        let scene, camera, renderer, particles, positionsArray;
+        let particleCount = 1200;
+        let mouseX = 0, mouseY = 0;
+        let windowHalfX = window.innerWidth / 2;
+        let windowHalfY = window.innerHeight / 2;
+        const repelRadius = 150;
+        const repelStrength = 8;
 
-  <!-- Contact -->
-<section id="contact" class="section bg-light">
-  <div class="container">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="row">
-      <div class="col-md-6 mx-auto">
-        <p>Email: mohammed97ashraf@gmail.com</p>
-        <p>Contact Number: +91 9591356915</p>
-      </div>
-    </div>
-  </div>
-</section>
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 400;
 
+            renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('hero-canvas'), alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
 
-  <!-- Footer -->
-  <footer class="footer py-3">
-    <div class="container text-center">
-      <p>&copy; 2024 Mohammed Ashraf</p>
-    </div>
-  </footer>
+            const geometry = new THREE.BufferGeometry();
+            const positions = new Float32Array(particleCount * 3);
+            const colors = new Float32Array(particleCount * 3);
+            const sizes = new Float32Array(particleCount);
 
-  <!-- Font Awesome -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      // Skill Slider
-      var slideIndex = 0;
-      showSlides();
+            const galaxyColor1 = new THREE.Color(0x001133);
+            const galaxyColor2 = new THREE.Color(0xAAAAFF);
+            const starColor = new THREE.Color(0xFFFFFF);
 
-      function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("slide");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+            positionsArray = positions; // Store positions array for updates
+
+            for (let i = 0; i < particleCount; i++) {
+                const spiralArm = (i % 2 === 0) ? 1 : -1;
+                const angle = Math.random() * Math.PI * 2;
+                const distanceToCenter = 50 + Math.random() * 150;
+                const depth = (Math.random() - 0.5) * 100;
+
+                const x = distanceToCenter * Math.cos(angle + distanceToCenter / 30 * spiralArm);
+                const y = distanceToCenter * Math.sin(angle + distanceToCenter / 30 * spiralArm);
+                const z = depth;
+
+                positions[i * 3] = x;
+                positions[i * 3 + 1] = y;
+                positions[i * 3 + 2] = z;
+
+                let color = galaxyColor1.clone();
+                const normalizedDistance = distanceToCenter / 200;
+                color.lerp(galaxyColor2, normalizedDistance);
+
+                if (Math.random() < 0.05) {
+                    color.lerp(starColor, 0.5 + Math.random() * 0.5);
+                    sizes[i] = 8 + Math.random() * 5;
+                } else {
+                    sizes[i] = 3 + Math.random() * 2;
+                }
+
+                colors[i * 3] = color.r;
+                colors[i * 3 + 1] = color.g;
+                colors[i * 3 + 2] = color.b;
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+            geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+            const material = new THREE.PointsMaterial({
+                size: 1,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.8,
+                blending: THREE.AdditiveBlending
+            });
+
+            particles = new THREE.Points(geometry, material);
+            scene.add(particles);
+
+            animate();
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        slides[slideIndex-1].style.display = "block";  
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-      }
-    });
-  </script>
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            particles.rotation.z += 0.0005;
+            particles.rotation.y += 0.0001;
+
+            camera.position.x += ( mouseX * 1.5 - camera.position.x ) * 0.025;
+            camera.position.y += ( - mouseY * 1.5 - camera.position.y ) * 0.025;
+            camera.lookAt( scene.position );
+
+            // Mouse Repel Effect
+            const particlePositions = particles.geometry.attributes.position.array;
+            for (let i = 0; i < particleCount; i++) {
+                const index = i * 3;
+                let px = particlePositions[index];
+                let py = particlePositions[index + 1];
+                let pz = particlePositions[index + 2];
+
+                // Calculate distance to mouse in 2D (x,y plane)
+                const dx = px - mouseX * 1.5; // Scale mouseX to match particle space
+                const dy = py + mouseY * 1.5; // Invert mouseY and scale
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < repelRadius) {
+                    const force = (repelRadius - distance) / repelRadius * repelStrength;
+                    const directionX = dx / distance; // Normalize direction
+                    const directionY = dy / distance;
+
+                    particlePositions[index] += directionX * force;
+                    particlePositions[index + 1] += directionY * force;
+                }
+            }
+            particles.geometry.attributes.position.needsUpdate = true; // Important: Update buffer
+
+            renderer.render(scene, camera);
+        }
+
+        function onDocumentMouseMove(event) {
+            mouseX = ( event.clientX - windowHalfX ) * 0.2;
+            mouseY = ( event.clientY - windowHalfY ) * 0.2;
+        }
+
+        document.addEventListener('mousemove', onDocumentMouseMove);
+
+        init();
+
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+    </script>
 </body>
 </html>
