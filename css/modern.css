@@ -1,0 +1,710 @@
+/* Space / Sci-Fi HUD Theme */
+:root {
+    --bg-deep: #020205;
+    /* Void Black */
+    --bg-panel: rgba(10, 15, 30, 0.6);
+
+    --text-primary: #e0f2ff;
+    --text-muted: #8899ac;
+
+    --hud-cyan: #00f3ff;
+    --hud-orange: #ff9d00;
+    --hud-border: rgba(0, 243, 255, 0.3);
+
+    --font-display: 'Orbitron', sans-serif;
+    --font-texth: 'Rajdhani', sans-serif;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: var(--font-texth);
+    font-size: 1.1rem;
+    /* Rajdhani is a bit condensed */
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Background Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+.navbar-brand,
+.btn,
+.nav-link {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.thin {
+    font-weight: 400;
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+.highlight-text {
+    color: var(--hud-cyan);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+/* Navigation */
+.glass-nav {
+    background: rgba(2, 2, 5, 0.9);
+    border-bottom: 1px solid var(--hud-border);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: var(--hud-cyan) !important;
+    text-shadow: 0 0 5px var(--hud-cyan);
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--hud-cyan) !important;
+    text-shadow: 0 0 8px var(--hud-cyan);
+}
+
+.nav-link::before {
+    content: '[';
+    margin-right: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: var(--hud-orange);
+}
+
+.nav-link::after {
+    content: ']';
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: var(--hud-orange);
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+/* HUD Panels (Replacing Glass Panels) */
+.glass-panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--hud-border);
+    /* HUD Corner Shape using clip-path could be used, but let's stick to css borders for broader support */
+    position: relative;
+    padding: 30px;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+/* Corner Decorations */
+.glass-panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-top-color: var(--hud-cyan);
+    border-bottom-color: var(--hud-cyan);
+    transform: scaleX(0);
+    transition: 0.4s;
+}
+
+.glass-panel:hover::after {
+    transform: scaleX(1);
+}
+
+.glass-panel:hover {
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+    background: rgba(0, 243, 255, 0.05);
+}
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.role-subtitle {
+    color: var(--hud-orange);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--hud-orange);
+    padding-left: 15px;
+}
+
+.hero-title {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.hero-desc {
+    font-family: var(--font-texth);
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+/* Sci-Fi Buttons */
+.btn-primary-glow {
+    background: rgba(0, 243, 255, 0.1);
+    border: 1px solid var(--hud-cyan);
+    color: var(--hud-cyan);
+    border-radius: 0;
+    padding: 12px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    margin-right: 15px;
+}
+
+.btn-primary-glow:hover {
+    background: var(--hud-cyan);
+    color: #000;
+    box-shadow: 0 0 20px var(--hud-cyan);
+}
+
+.btn-outline-glow {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    border-radius: 0;
+    padding: 12px 30px;
+}
+
+.btn-outline-glow:hover {
+    border-color: var(--hud-orange);
+    color: var(--hud-orange);
+    box-shadow: 0 0 15px rgba(255, 157, 0, 0.3);
+}
+
+/* Sections */
+.section-padding {
+    padding: 120px 0;
+}
+
+.section-heading-wrapper {
+    display: inline-block;
+    border-bottom: 2px solid var(--hud-orange);
+    padding-bottom: 10px;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-heading {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.section-heading-decoration {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    font-size: 0.8rem;
+    color: var(--hud-cyan);
+    font-family: monospace;
+}
+
+/* Skills (System Status) */
+.skill-category-title {
+    color: var(--hud-cyan);
+    border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-tag {
+    display: inline-block;
+    border: 1px solid var(--text-muted);
+    padding: 5px 12px;
+    margin: 5px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    border-color: var(--hud-cyan);
+    color: var(--hud-cyan);
+    background: rgba(0, 243, 255, 0.1);
+}
+
+/* Timeline (Flight Log) */
+.timeline {
+    position: relative;
+    border-left: 1px dashed var(--text-muted);
+    margin-left: 20px;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--bg-deep);
+    border: 2px solid var(--hud-orange);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    display: block;
+    color: var(--hud-orange);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.timeline-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.timeline-role {
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+/* Terminal Contact */
+.terminal-window {
+    border: 1px solid var(--hud-cyan);
+    background: rgba(0, 20, 20, 0.9);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+}
+
+.terminal-header {
+    background: rgba(0, 243, 255, 0.1);
+    border-bottom: 1px solid var(--hud-cyan);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+#contact-form input {
+    /* Your styles here */
+    margin: 2px 2px 2px 2px;
+}
+
+.custom-input {
+    background: transparent;
+    border: 1px solid #333;
+    color: var(--hud-cyan);
+    padding: 15px;
+    border-radius: 0;
+}
+
+.custom-input:focus {
+    border-color: var(--hud-cyan);
+    background: rgba(43, 198, 206, 0.05);
+    box-shadow: none;
+    color: var(--hud-cyan);
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer p {
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* --- Ship Tracker --- */
+#ship-tracker {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    z-index: 1000;
+    color: var(--hud-cyan);
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 10px var(--hud-cyan));
+    transition: top 0.1s linear, transform 0.3s;
+    pointer-events: none;
+}
+
+/* --- Refactored About Section --- */
+.about-panel {
+    border-left: 5px solid var(--hud-orange);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid var(--hud-cyan);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* --- BERSERK MODE: Creative Overhaul --- */
+
+/* 1. Custom Cursor (Targeting System) */
+body {
+    cursor: crosshair;
+    /* Fallback */
+}
+
+a,
+button,
+.btn,
+.nav-link,
+.glass-panel {
+    cursor: cell !important;
+    /* Interactive visual */
+}
+
+/* 2. CRT Scanline Overlay */
+.crt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg,
+            rgba(255, 0, 0, 0.03),
+            rgba(0, 255, 0, 0.01),
+            rgba(0, 0, 255, 0.03));
+    background-size: 100% 3px, 3px 100%;
+    pointer-events: none;
+    z-index: 9999;
+    animation: flicker 0.15s infinite;
+    mix-blend-mode: overlay;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.95;
+    }
+
+    50% {
+        opacity: 0.85;
+    }
+
+    100% {
+        opacity: 0.95;
+    }
+}
+
+/* 3. Glitch Effect */
+.glitch {
+    position: relative;
+    color: var(--text-primary);
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-deep);
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 var(--hud-orange);
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -1px 0 var(--hud-cyan);
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(10px, 9999px, 30px, 0);
+    }
+
+    20% {
+        clip: rect(80px, 9999px, 100px, 0);
+    }
+
+    40% {
+        clip: rect(10px, 9999px, 50px, 0);
+    }
+
+    60% {
+        clip: rect(40px, 9999px, 90px, 0);
+    }
+
+    80% {
+        clip: rect(20px, 9999px, 60px, 0);
+    }
+
+    100% {
+        clip: rect(50px, 9999px, 80px, 0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+        clip: rect(90px, 9999px, 100px, 0);
+    }
+
+    20% {
+        clip: rect(10px, 9999px, 20px, 0);
+    }
+
+    40% {
+        clip: rect(60px, 9999px, 80px, 0);
+    }
+
+    60% {
+        clip: rect(20px, 9999px, 40px, 0);
+    }
+
+    80% {
+        clip: rect(80px, 9999px, 90px, 0);
+    }
+
+    100% {
+        clip: rect(30px, 9999px, 50px, 0);
+    }
+}
+
+/* 4. Active Holographic Borders */
+.glass-panel {
+    border: 1px solid rgba(0, 243, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.05);
+}
+
+.glass-panel:hover {
+    border-color: var(--hud-cyan);
+    box-shadow: 0 0 20px var(--hud-cyan), inset 0 0 20px rgba(0, 243, 255, 0.1);
+}
+
+/* Add corner markers */
+.glass-panel::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid var(--hud-cyan);
+    border-left: 3px solid var(--hud-cyan);
+    transition: all 0.3s;
+    opacity: 0.5;
+}
+
+.glass-panel::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid var(--hud-cyan);
+    border-right: 3px solid var(--hud-cyan);
+    transition: all 0.3s;
+}
+
+.glass-panel:hover::before,
+.glass-panel:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+/* Adjustments */
+body {
+    overflow-x: hidden;
+}
+
+/* --- Phase 9: Hand-Drawn / Blueprint Style --- */
+:root {
+    --font-hand: 'Architects Daughter', cursive;
+}
+
+.hand-note {
+    font-family: var(--font-hand);
+    color: var(--hud-cyan);
+    font-size: 0.9rem;
+    position: absolute;
+    transform: rotate(-5deg);
+    opacity: 0.8;
+}
+
+.blueprint-border {
+    position: relative;
+    border: 1px dashed var(--hud-border) !important;
+}
+
+.blueprint-border::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid var(--hud-cyan);
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.arrow-decoration {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--hud-cyan);
+}
+
+/* --- Mobile Optimization (Restored) --- */
+@media (max-width: 991px) {
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-primary-glow {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        word-wrap: break-word;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .section-heading {
+        font-size: 2.2rem;
+    }
+
+    .section-heading-decoration {
+        font-size: 0.7rem;
+        right: -10px;
+    }
+
+    .about-panel {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-avatar {
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .d-flex.gap-3 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #ship-tracker {
+        display: none !important;
+    }
+
+    .timeline {
+        margin-left: 10px;
+        padding-left: 20px;
+    }
+
+    .timeline-dot {
+        left: -27px;
+        width: 14px;
+        height: 14px;
+        top: 6px;
+    }
+
+    /* Disable Custom Cursor on Touch */
+    body,
+    a,
+    button,
+    .btn {
+        cursor: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-nav {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .glass-panel {
+        padding: 20px 15px;
+    }
+}

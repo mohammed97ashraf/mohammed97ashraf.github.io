@@ -4,588 +4,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Ashraf | Isekai Developer</title>
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Mohammed Ashraf | Senior AI Architect</title>
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Outfit:wght@300;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modern.css">
 </head>
 
-<body>
-    <div id="sakura-container"></div>
-
-    <!-- Loader: The Summoning -->
-    <div id="isekai-loader">
-        <div class="summoning-circle">
-            <div class="rune-ring outer"></div>
-            <div class="rune-ring inner"></div>
-            <div class="magic-particles"></div>
-        </div>
-        <h2 class="loading-text">Summoning Hero from Another World...</h2>
-        <div class="progress-bar-container">
-            <div class="progress-fill"></div>
-        </div>
+<body class="dark-theme">
+    <!-- Pre-loader -->
+    <div id="preloader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">// INITIALIZING...</div>
     </div>
 
-    <!-- Main Content -->
-    <main id="main-content" class="d-none">
+    <!-- CRT Overlay -->
+    <div class="crt-overlay"></div>
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg fixed-top isekai-nav">
-            <div class="container">
-                <a class="navbar-brand" href="#">Lv.6 Archmage</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#hero">Start</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Status</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Grimoire</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Quests</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experience">Adventure Log</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Guild Card</a></li>
-                    </ul>
-                </div>
+    <!-- Canvas for 3D Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">M.ASHRAF<span class="dot">.</span>AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">SKILLS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">EXPERIENCE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#work">PROJECTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Hero Section: Chapter 1 -->
-        <section id="hero" class="hero-section">
-            <div class="hero-bg-fx"></div>
-            <div class="container position-relative z-2">
-                <div class="row align-items-center min-vh-100">
-                    <!-- Character (Right on Desktop, Top on Mobile) -->
-                    <div class="col-lg-6 order-lg-2 text-center mb-5 mb-lg-0">
-                        <div class="hero-card-container floating-anim">
-                            <div class="hero-card-frame">
-                                <img src="images/character.png" alt="Mohammed Ashraf Avatar"
-                                    class="img-fluid hero-card-img">
-                                <div class="card-shine"></div>
-                                <div class="scouter-overlay">
-                                    <div class="scouter-ring"></div>
-                                    <span class="power-level">PWR: 9000+</span>
-                                </div>
-                            </div>
-                            <div class="speech-bubble-hero">
-                                <p>I was Reincarnated as an AI Engineer!</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Title/Stats (Left) -->
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="title-panel">
-                            <span class="chapter-badge">CHAPTER 1: THE ARRIVAL</span>
-                            <h1 class="anime-title">MOHAMMED<br><span class="text-stroke">ASHRAF</span></h1>
-                            <p class="anime-subtitle">Senior Data Scientist & Machine Learning Engineer</p>
+    <!-- Ship Tracker -->
+    <div id="ship-tracker">
+        <i class="fas fa-space-shuttle fa-rotate-90"></i>
+    </div>
 
-                            <div class="system-log-box">
-                                <div class="log-header">
-                                    <span class="blink">> SYSTEM INITIALIZATION...</span>
-                                </div>
-                                <div class="log-body">
-                                    <div class="log-entry">
-                                        <span class="cmd">Load_Skill(STR):</span>
-                                        <div class="log-bar">
-                                            <div style="width: 95%"></div>
-                                        </div>
-                                        <span class="val">95%</span>
-                                    </div>
-                                    <div class="log-entry">
-                                        <span class="cmd">Load_Skill(INT):</span>
-                                        <div class="log-bar">
-                                            <div style="width: 98%"></div>
-                                        </div>
-                                        <span class="val">98%</span>
-                                    </div>
-                                    <div class="log-entry">
-                                        <span class="cmd">Load_Skill(LUCK):</span>
-                                        <div class="log-bar luck-bar">
-                                            <div style="width: 20%"></div>
-                                        </div>
-                                        <span class="val">CRITICAL FAIL</span>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- Doodle Clouds -->
+    <div class="doodle-cloud cloud-1"></div>
+    <div class="doodle-cloud cloud-2"></div>
+    <div class="doodle-cloud cloud-3"></div>
 
-                            <a href="#projects" class="btn btn-start-game mt-4">
-                                <span class="btn-inner">LINK START</span>
-                            </a>
-                        </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 hero-content reveal">
+                    <h2 class="role-subtitle">SENIOR DATA SCIENTIST & ML ENGINEER</h2>
+                    <h1 class="hero-title glitch" data-text="ARCHITECTING INTELLIGENCE">ARCHITECTING<br><span
+                            class="highlight-text">INTELLIGENCE</span></h1>
+                    <p class="hero-desc">
+                        Specializing in Generative AI, Large Language Models, and Agentic Systems.
+                        Turning complex data into scalable, intelligent solutions.
+                    </p>
+                    <div class="hero-btns mt-4">
+                        <a href="#work" class="btn btn-primary-glow">VIEW PROJECTS</a>
+                        <a href="#contact" class="btn btn-outline-glow">CONTACT ME</a>
                     </div>
                 </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <!-- 3D Focus Area -->
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section: Status Screen -->
-        <section id="about" class="section-padding">
-            <div class="container">
-                <h2 class="section-title text-center mb-5"><span>Status Screen</span></h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-10">
-                        <div class="status-window rpg-theme">
-                            <div class="rpg-header">
-                                <span class="header-deco left">✦</span>
-                                <span class="window-title">STATUS WINDOW</span>
-                                <span class="header-deco right">✦</span>
-                            </div>
-                            <div class="window-body">
-                                <div class="row h-100">
-                                    <div class="col-lg-5 col-md-12 text-center char-col">
-                                        <div class="avatar-frame rpg-frame">
-                                            <img src="images/new_character.png" alt="Avatar"
-                                                class="img-fluid rpg-avatar">
-                                            <div class="level-badge">Lv. 25</div>
-                                        </div>
-                                        <h3 class="rpg-name mt-3">Mohammed Ashraf</h3>
-                                        <p class="rpg-class">Job: Agentic AI Architect</p>
-
-                                        <div class="vital-bars">
-                                            <div class="vital-row">
-                                                <span class="vital-label">HP</span>
-                                                <div class="vital-bar-track">
-                                                    <div class="vital-bar-fill hp-fill" style="width: 100%">3500/3500
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="vital-row">
-                                                <span class="vital-label">MP</span>
-                                                <div class="vital-bar-track">
-                                                    <div class="vital-bar-fill mp-fill" style="width: 100%">9999/9999
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-12 info-col">
-                                        <div class="info-panel">
-                                            <h5 class="panel-label">DESCRIPTION</h5>
-                                            <div class="rpg-box mb-3">
-                                                <p class="bio-text">A Machine Learning Engineer with 6+ years of
-                                                    experience specializing in Generative AI, LLMs, and Agentic AI.
-                                                    Builds scalable AI solutions and has a passive skill for turning
-                                                    complex problems into magical code.</p>
-                                            </div>
-
-                                            <h5 class="panel-label">ATTRIBUTES</h5>
-                                            <div class="rpg-stats-grid">
-                                                <div class="rpg-stat-row">
-                                                    <span class="stat-key">Location</span>
-                                                    <span class="stat-val">Bangalore, India</span>
-                                                </div>
-                                                <div class="rpg-stat-row">
-                                                    <span class="stat-key">Experience</span>
-                                                    <span class="stat-val">6+ Years</span>
-                                                </div>
-                                                <div class="rpg-stat-row">
-                                                    <span class="stat-key">Guild ID</span>
-                                                    <span class="stat-val">9591356915</span>
-                                                </div>
-                                                <div class="rpg-stat-row full-width">
-                                                    <span class="stat-key">Contact</span>
-                                                    <span class="stat-val email-val">Mohammed97ashraf@gmail.com</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="action-area mt-4 text-end">
-                                                <a href="https://mohammed97ashraf.github.io/YOUR_CV_LINK"
-                                                    class="btn btn-rpg-action">
-                                                    <i class="fas fa-scroll"></i> VIEW FULL STATUS (CV)
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <div class="section-heading-wrapper reveal">
+                        <h2 class="section-heading">ABOUT <span class="thin">ME</span></h2>
+                        <span class="section-heading-decoration">// PROFILE_LOADED</span>
+                    </div>
+                </div>
+                <div class="col-lg-12 reveal">
+                    <div class="glass-panel about-panel d-flex align-items-center">
+                        <img src="images/new_character.png" alt="Mohammed Ashraf" class="profile-avatar me-4">
+                        <div class="about-text">
+                            <p class="lead text-white mb-4">
+                                I am a <strong>Machine Learning Engineer</strong> with <strong>6+ years of
+                                    experience</strong>, currently leading Generative AI initiatives.
+                                My passion lies in building agentic workflows, optimizing LLM inference, and deploying
+                                scalable AI architectures.
+                            </p>
+                            <p class="text-muted">
+                                From leading teams at MResult to architecting solutions at Kapture CX, I focus on the
+                                intersection of research and production engineering.
+                            </p>
+                            <div class="d-flex mt-4 gap-3">
+                                <span class="badge-tech">Python</span>
+                                <span class="badge-tech">PyTorch</span>
+                                <span class="badge-tech">AWS</span>
+                                <span class="badge-tech">GenAI</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section: Grimoire -->
-        <section id="skills" class="section-padding bg-light-fantasy">
-            <div class="container">
-                <h2 class="section-title text-center mb-5"><span>Grimoire of Knowledge</span></h2>
-                <div class="row">
-                    <!-- Spell Page 1: AI (Pink/Purple) -->
-                    <div class="col-md-4 mb-4">
-                        <div class="grimoire-card magic-card-purple">
-                            <div class="card-icon-container">
-                                <div class="magic-circle"></div>
-                                <i class="fas fa-brain card-icon"></i>
-                            </div>
-                            <h3 class="magic-title">Arcane Arts</h3>
-                            <p class="magic-subtitle">AI & Machine Learning</p>
-                            <ul class="spell-list">
-                                <li class="spell-slot"><span>Deep Learning</span> <span class="mastery">Lv.99</span>
-                                </li>
-                                <li class="spell-slot"><span>Generative AI</span> <span class="mastery">Lv.90</span>
-                                </li>
-                                <li class="spell-slot"><span>LLMs & Agents</span> <span class="mastery">Lv.85</span>
-                                </li>
-                                <li class="spell-slot"><span>NLP</span> <span class="mastery">Lv.80</span></li>
-                                <li class="spell-slot"><span>LangChain</span> <span class="mastery">Lv.75</span></li>
-                            </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading mb-5 reveal">TECHNICAL <span class="thin">SKILLS</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="glass-panel text-start">
+                        <h4 class="skill-category-title"><i class="fas fa-brain me-2"></i> AI & ML</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Generative AI</span>
+                            <span class="skill-tag">LLMs (GPT/Llama)</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Computer Vision</span>
                         </div>
                     </div>
-                    <!-- Spell Page 2: Code (Cyan) -->
-                    <div class="col-md-4 mb-4">
-                        <div class="grimoire-card magic-card-cyan">
-                            <div class="card-icon-container">
-                                <div class="magic-circle"></div>
-                                <i class="fas fa-code card-icon"></i>
-                            </div>
-                            <h3 class="magic-title">Incantations</h3>
-                            <p class="magic-subtitle">Programming & Logic</p>
-                            <ul class="spell-list">
-                                <li class="spell-slot"><span>Python</span> <span class="mastery">MAX</span></li>
-                                <li class="spell-slot"><span>JavaScript</span> <span class="mastery">Lv.70</span></li>
-                                <li class="spell-slot"><span>SQL / NoSQL</span> <span class="mastery">Lv.75</span></li>
-                                <li class="spell-slot"><span>HTML / CSS</span> <span class="mastery">Lv.80</span></li>
-                            </ul>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="glass-panel text-start">
+                        <h4 class="skill-category-title"><i class="fas fa-code me-2"></i> Engineering</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL / NoSQL</span>
+                            <span class="skill-tag">FastAPI / Flask</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS Cloud</span>
+                            <span class="skill-tag">Git / CI/CD</span>
                         </div>
                     </div>
-                    <!-- Spell Page 3: Tools (Orange) -->
-                    <div class="col-md-4 mb-4">
-                        <div class="grimoire-card magic-card-orange">
-                            <div class="card-icon-container">
-                                <div class="magic-circle"></div>
-                                <i class="fas fa-tools card-icon"></i>
-                            </div>
-                            <h3 class="magic-title">Artifacts</h3>
-                            <p class="magic-subtitle">Tools & Infrastructure</p>
-                            <ul class="spell-list">
-                                <li class="spell-slot"><span>Flask & FastAPI</span> <span class="mastery">Lv.90</span>
-                                </li>
-                                <li class="spell-slot"><span>AWS Cloud</span> <span class="mastery">Lv.70</span></li>
-                                <li class="spell-slot"><span>Docker / DevOps</span> <span class="mastery">Lv.65</span>
-                                </li>
-                                <li class="spell-slot"><span>Git / GitHub</span> <span class="mastery">MAX</span></li>
-                            </ul>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="glass-panel text-start">
+                        <h4 class="skill-category-title"><i class="fas fa-laptop-code me-2"></i> Frontend & Tools</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">jQuery</span>
+                            <span class="skill-tag">HTML5 / CSS3</span>
+                            <span class="skill-tag">Bootstrap</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section: Quest Board -->
-        <section id="projects" class="section-padding quest-section">
-            <div class="quest-wood-bg"></div>
-            <div class="container position-relative">
-                <div class="board-header text-center mb-5">
-                    <h2 class="board-title">Available Quests</h2>
-                    <p class="board-subtitle">Select a commission to view details</p>
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading mb-5 reveal">PROFESSIONAL <span class="thin">EXPERIENCE</span></h2>
+            <div class="timeline reveal">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">2024 - 2025</span>
+                    <h3 class="timeline-title">Senior Data Scientist</h3>
+                    <p class="timeline-role">MResult</p>
+                    <p>Leading Generative AI initiatives, integrating Jira workflows with AI, and optimizing internal
+                        processes using agentic systems.</p>
                 </div>
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">2023 - 2024</span>
+                    <h3 class="timeline-title">Senior ML Engineer</h3>
+                    <p class="timeline-role">Kapture CX</p>
+                    <p>Architected multilingual chatbot defense systems and RAG (Retrieval-Augmented Generation)
+                        pipelines for enterprise clients.</p>
+                </div>
+                <!-- Job 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">2022 - 2023</span>
+                    <h3 class="timeline-title">CTO & Co-Founder</h3>
+                    <p class="timeline-role">Sales Sunday</p>
+                    <p>Designed and deployed AI QA systems and script generators to automate sales coaching and quality
+                        assurance.</p>
+                </div>
+                <!-- Job 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">2021 - 2022</span>
+                    <h3 class="timeline-title">Lead ML Engineer</h3>
+                    <p class="timeline-role">Wobb.ai</p>
+                    <p>Developed multimodal classification algorithms for influencer discovery and marketing analytics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="row g-4 justify-content-center">
-                    <!-- Quest 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="quest-paper">
-                            <div class="pin"></div>
-                            <div class="quest-header">
-                                <span class="quest-type">WANTED</span>
-                                <div class="quest-rank rank-s">S</div>
-                            </div>
-                            <h3 class="quest-title">Odia T5 Model</h3>
-                            <div class="quest-img-box">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <p class="quest-desc">Develop a T5-based model for NLP tasks in the Odia language. High
-                                priority.</p>
-                            <div class="quest-stats">
-                                <div class="stat"><i class="fas fa-star"></i> DIFF: <span>HARD</span></div>
-                                <div class="stat"><i class="fas fa-coins"></i> REWARD: <span>Knowledge</span></div>
-                            </div>
-                            <div class="quest-tags">
+    <!-- Work Section -->
+    <section id="work" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading mb-5 reveal">Featured <span class="thin">Projects</span></h2>
+            <span class="hand-note" style="position: relative; top: -40px; left: 200px;">// Top Secret</span>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card glass-panel">
+                        <div class="card-body">
+                            <h4 class="project-title">Odia T5 Model</h4>
+                            <p class="project-desc">T5-based model for NLP tasks in the Odia language. Open source
+                                contribution.</p>
+                            <div class="project-tags">
                                 <span>NLP</span>
                                 <span>T5</span>
+                                <span>HuggingFace</span>
                             </div>
-                            <a href="#" class="btn-accept-quest"
-                                onclick="acceptQuest(this, 'https://huggingface.co/mrSoul7766/odia-t5-base')">
-                                <span class="btn-text">ACCEPT QUEST</span>
-                                <span class="stamp-mark">ACCEPTED</span>
-                            </a>
+                            <a href="https://huggingface.co/mrSoul7766/odia-t5-base" class="project-link"
+                                target="_blank">View Model <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Quest 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="quest-paper">
-                            <div class="pin"></div>
-                            <div class="quest-header">
-                                <span class="quest-type">BOUNTY</span>
-                                <div class="quest-rank rank-a">A</div>
-                            </div>
-                            <h3 class="quest-title">AgriQbot</h3>
-                            <div class="quest-img-box">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <p class="quest-desc">Fine-tune FLAN-T5 for agricultural Q&A. Target: Assist farmers with AI
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card glass-panel">
+                        <div class="card-body">
+                            <h4 class="project-title">AgriQbot</h4>
+                            <p class="project-desc">Fine-tuned FLAN-T5 for agricultural Q&A to assist farmers with AI
                                 insights.</p>
-                            <div class="quest-stats">
-                                <div class="stat"><i class="fas fa-star"></i> DIFF: <span>MED</span></div>
-                                <div class="stat"><i class="fas fa-coins"></i> REWARD: <span>500 XP</span></div>
-                            </div>
-                            <div class="quest-tags">
+                            <div class="project-tags">
                                 <span>Fine-tuning</span>
-                                <span>Agri-Tech</span>
+                                <span>AgriTech</span>
                             </div>
-                            <a href="#" class="btn-accept-quest"
-                                onclick="acceptQuest(this, 'https://huggingface.co/mrSoul7766/AgriQBott')">
-                                <span class="btn-text">ACCEPT QUEST</span>
-                                <span class="stamp-mark">ACCEPTED</span>
-                            </a>
+                            <a href="https://huggingface.co/mrSoul7766/AgriQBott" class="project-link"
+                                target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Quest 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="quest-paper">
-                            <div class="pin"></div>
-                            <div class="quest-header">
-                                <span class="quest-type">URGENT</span>
-                                <div class="quest-rank rank-s-plus">S+</div>
-                            </div>
-                            <h3 class="quest-title">Sales AI Agent</h3>
-                            <div class="quest-img-box">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <p class="quest-desc">Construct a real-time telephony sales agent using Twilio & Groq.
-                                Latency critical.</p>
-                            <div class="quest-stats">
-                                <div class="stat"><i class="fas fa-star"></i> DIFF: <span>EXTREME</span></div>
-                                <div class="stat"><i class="fas fa-coins"></i> REWARD: <span>Contract</span></div>
-                            </div>
-                            <div class="quest-tags">
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card glass-panel">
+                        <div class="card-body">
+                            <h4 class="project-title">Sales AI Agent</h4>
+                            <p class="project-desc">Real-time telephony sales agent using Twilio & Groq for ultra-low
+                                latency.</p>
+                            <div class="project-tags">
                                 <span>Voice AI</span>
                                 <span>Groq</span>
+                                <span>Twilio</span>
                             </div>
-                            <a href="#" class="btn-accept-quest"
-                                onclick="acceptQuest(this, 'https://github.com/mohammed97ashraf/telephony_sales_agent')">
-                                <span class="btn-text">ACCEPT QUEST</span>
-                                <span class="stamp-mark">ACCEPTED</span>
-                            </a>
+                            <a href="https://github.com/mohammed97ashraf/telephony_sales_agent" class="project-link"
+                                target="_blank">View Code <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Quest 4 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="quest-paper">
-                            <div class="pin"></div>
-                            <div class="quest-header">
-                                <span class="quest-type">WANTED</span>
-                                <div class="quest-rank rank-a">A</div>
-                            </div>
-                            <h3 class="quest-title">Text-to-SQL Agent</h3>
-                            <div class="quest-img-box">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <p class="quest-desc">Voice-enabled AI agent translating natural language to SQL queries.
-                                Secure execution.</p>
-                            <div class="quest-stats">
-                                <div class="stat"><i class="fas fa-star"></i> DIFF: <span>HARD</span></div>
-                                <div class="stat"><i class="fas fa-coins"></i> REWARD: <span>1000 XP</span></div>
-                            </div>
-                            <div class="quest-tags">
+                </div>
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="project-card glass-panel">
+                        <div class="card-body">
+                            <h4 class="project-title">Text-to-SQL Agent</h4>
+                            <p class="project-desc">Voice-enabled AI agent translating natural language to SQL queries
+                                securely.</p>
+                            <div class="project-tags">
                                 <span>LangGraph</span>
                                 <span>SQL</span>
+                                <span>Agentic</span>
                             </div>
-                            <a href="#" class="btn-accept-quest"
-                                onclick="acceptQuest(this, 'https://github.com/mohammed97ashraf/NL2SQL-Agent')">
-                                <span class="btn-text">ACCEPT QUEST</span>
-                                <span class="stamp-mark">ACCEPTED</span>
-                            </a>
+                            <a href="https://github.com/mohammed97ashraf/NL2SQL-Agent" class="project-link"
+                                target="_blank">View Code <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Experience Section: Adventure Log -->
-        <section id="experience" class="section-padding bg-light-fantasy">
-            <div class="container">
-                <h2 class="section-title text-center mb-5"><span>Adventure Log</span></h2>
-                <div class="timeline">
-                    <!-- Item 1 -->
-                    <div class="timeline-item left">
-                        <div class="content battle-report">
-                            <div class="report-header">
-                                <span class="report-type">CURRENT CAMPAIGN</span>
-                                <span class="report-date">2025 - Present</span>
-                            </div>
-                            <h3 class="battle-title"><i class="fas fa-crown text-warning"></i> Raid Leader (Sr. Data
-                                Scientist)</h3>
-                            <h4 class="battle-realm">Realm: MResult</h4>
-                            <div class="battle-stats">
-                                <p><i class="fas fa-check-circle"></i> <strong>Mission:</strong> Leading GenAI Raids</p>
-                                <p><i class="fas fa-magic"></i> <strong>Loot:</strong> Jira Integration, Workflow Opt.
-                                </p>
-                            </div>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading mb-5 reveal">CERTIFICAT<span class="thin">IONS</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="glass-panel text-center">
+                        <i class="fas fa-certificate fa-3x mb-3 text-secondary"></i>
+                        <h5>Generative AI Certified Professional</h5>
+                        <p class="text-muted small">Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</p>
+                    </div>
+                </div>
+                <!-- Add more as needed -->
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="glass-panel text-center">
+                        <i class="fas fa-certificate fa-3x mb-3 text-secondary"></i>
+                        <h5>Microsoft Technology Associate</h5>
+                        <p class="text-muted small">Microsoft Technology Associate: Introduction to Programming Using Python</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="glass-panel text-center">
+                        <i class="fas fa-certificate fa-3x mb-3 text-secondary"></i>
+                        <h5>Building LLM Application with Prompt Engineering</h5>
+                        <p class="text-muted small">NVIDIA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading mb-5 reveal">LATEST <span class="thin">THOUGHTS</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="glass-panel blog-card">
+                        <div class="card-body">
+                            <p class="blog-date">March 15, 2025</p>
+                            <h4 class="blog-title">The Future of Agentic AI</h4>
+                            <p class="text-secondary small">Exploring how autonomous agents are reshaping enterprise
+                                workflows...</p>
+                            <a href="https://medium.com/@mohammed97ashraf" target="_blank" class="blog-link">Read on
+                                Medium <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Item 2 -->
-                    <div class="timeline-item right">
-                        <div class="content battle-report">
-                            <div class="report-header">
-                                <span class="report-type">VICTORY</span>
-                                <span class="report-date">2023 - 2024</span>
-                            </div>
-                            <h3 class="battle-title"><i class="fas fa-dungeon text-danger"></i> Dungeon Master (Sr. ML
-                                Engineer)</h3>
-                            <h4 class="battle-realm">Realm: Kapture CX</h4>
-                            <div class="battle-stats">
-                                <p><i class="fas fa-check-circle"></i> <strong>Mission:</strong> Multilingual Chatbot
-                                    Defense</p>
-                                <p><i class="fas fa-magic"></i> <strong>Loot:</strong> Agentic RAG Systems</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="timeline-item left">
-                        <div class="content battle-report">
-                            <div class="report-header">
-                                <span class="report-type">VICTORY</span>
-                                <span class="report-date">2022 - 2024</span>
-                            </div>
-                            <h3 class="battle-title"><i class="fas fa-chess-king text-info"></i> Guild Master (CTO)</h3>
-                            <h4 class="battle-realm">Realm: Sales Sunday</h4>
-                            <div class="battle-stats">
-                                <p><i class="fas fa-check-circle"></i> <strong>Mission:</strong> AI QA System Deployment
-                                </p>
-                                <p><i class="fas fa-magic"></i> <strong>Loot:</strong> Script Generators</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="timeline-item right">
-                        <div class="content battle-report">
-                            <div class="report-header">
-                                <span class="report-type">VICTORY</span>
-                                <span class="report-date">2021 - 2022</span>
-                            </div>
-                            <h3 class="battle-title"><i class="fas fa-fist-raised text-success"></i> Vanguard (Lead ML
-                                Engineer)</h3>
-                            <h4 class="battle-realm">Realm: Wobb.ai</h4>
-                            <div class="battle-stats">
-                                <p><i class="fas fa-check-circle"></i> <strong>Mission:</strong> Multimodal
-                                    Classification</p>
-                                <p><i class="fas fa-magic"></i> <strong>Loot:</strong> Influencer Discovery Algos</p>
-                            </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="glass-panel blog-card">
+                        <div class="card-body">
+                            <p class="blog-date">Feb 28, 2025</p>
+                            <h4 class="blog-title">Optimizing LLMs for Production</h4>
+                            <p class="text-secondary small">Key strategies for reducing latency and cost in large
+                                language models...</p>
+                            <a href="https://medium.com/@mohammed97ashraf" target="_blank" class="blog-link">Read on
+                                Medium <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section: Guild Services -->
-        <section id="contact" class="section-padding">
-            <div class="container">
-                <h2 class="section-title text-center mb-5"><span>Guild Services</span></h2>
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center reveal">
+                    <div class="section-heading-wrapper mb-5">
+                        <h2 class="section-heading">GET IN <span class="thin">TOUCH</span></h2>
+                        <span class="section-heading-decoration">_OPEN_CHANNEL</span>
+                    </div>
 
-                <div class="row justify-content-center gap-5">
-                    <!-- Guild Card (Left) -->
-                    <div class="col-lg-5 mb-4">
-                        <h3 class="text-center mb-4 comic-font">My Adventurer Card</h3>
-                        <div class="adventurer-card floating-anim">
-                            <div class="card-bg"></div>
-                            <div class="card-header-band">
-                                <span class="guild-name">AGENTIC GUILD</span>
-                                <span class="card-rank">RANK: S</span>
+                    <div class="terminal-window mt-4 text-start">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot-btn red"></span>
+                                <span class="dot-btn yellow"></span>
+                                <span class="dot-btn green"></span>
                             </div>
-                            <div class="card-content">
-                                <div class="card-photo">
-                                    <img src="images/new_character.png" alt="ID Photo">
-                                    <div class="holo-overlay"></div>
-                                </div>
-                                <div class="card-details">
-                                    <h4 class="adventurer-name">MOHAMMED ASHRAF</h4>
-                                    <p class="adventurer-class">CLASS: ARCHMAGE</p>
-                                    <p class="adventurer-id">ID: 9591356915</p>
-                                    <div class="skill-tags">
-                                        <span class="tag">GenAI</span>
-                                        <span class="tag">LLMs</span>
-                                        <span class="tag">Python</span>
+                            <span class="terminal-title">contact-form</span>
+                        </div>
+                        <div class="terminal-body">
+                            <form id="contact-form"
+                                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfXO029sr_4CAz0AwlBeaydeyA1f4T5FqBB0EOh8SbRtMSxyw/formResponse"
+                                method="POST" target="hidden_iframe">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <input type="text" class="form-control custom-input" name="entry.1043595730"
+                                            placeholder="ENTER NAME" required>
                                     </div>
-                                    <div class="social-links-mini mt-2">
-                                        <a href="https://www.linkedin.com/in/mohammed97ashraf/" target="_blank"><i
-                                                class="fab fa-linkedin"></i></a>
-                                        <a href="https://medium.com/@mohammed97ashraf" target="_blank"><i
-                                                class="fab fa-medium"></i></a>
-                                        <a href="mailto:Mohammed97ashraf@gmail.com"><i class="fas fa-envelope"></i></a>
+                                    <div class="col-md-6 mb-4">
+                                        <input type="email" class="form-control custom-input" name="entry.474384457"
+                                            placeholder="ENTER EMAIL" required>
                                     </div>
                                 </div>
-                                <div class="card-stamp">
-                                    <i class="fas fa-dragon"></i>
-                                    <span>APPROVED</span>
+                                <div class="mb-4">
+                                    <select class="form-control custom-input" name="entry.573156319">
+                                        <option value="" disabled selected>SELECT PROTOCOL (PROJECT TYPE)</option>
+                                        <option>Build AI Agent</option>
+                                        <option>Consulting</option>
+                                        <option>Full Application</option>
+                                        <option>Other</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <div class="card-footer-band">
-                                <div class="barcode">|| ||| || |||| ||| ||</div>
-                            </div>
+                                <div class="mb-5">
+                                    <textarea class="form-control custom-input" rows="3" name="entry.900168909"
+                                        placeholder="EXECUTE MESSAGE..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary-glow w-100"> &gt; SEND
+                                    TRANSMISSION</button>
+                            </form>
                         </div>
                     </div>
 
-                    <!-- Job Board (Right) -->
-                    <div class="col-lg-6">
-                        <h3 class="text-center mb-4 comic-font">Request Board</h3>
-                        <div class="commission-board">
-                            <div class="paper-clip"></div>
-                            <div class="commission-paper">
-                                <h4 class="paper-title">POST A QUEST</h4>
-                                <form id="guild-job-form">
-                                    <div class="mb-3">
-                                        <label class="paper-label">Client Name (Your Name)</label>
-                                        <input type="text" class="paper-input" placeholder="e.g. King of Westel"
-                                            required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="paper-label">Contact Crystal (Email)</label>
-                                        <input type="email" class="paper-input" placeholder="hero@example.com" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="paper-label">Quest Type</label>
-                                        <select class="paper-input">
-                                            <option>Build AI Agent</option>
-                                            <option>Consulting</option>
-                                            <option>Full Application</option>
-                                            <option>Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="paper-label">Quest Details</label>
-                                        <textarea class="paper-input" rows="3"
-                                            placeholder="Describe the monster... I mean project." required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn-stamp">
-                                        <span class="btn-text">POST COMMISSION</span>
-                                        <span class="btn-icon"><i class="fas fa-scroll"></i></span>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
+                    <div class="social-links mt-5">
+                        <a href="https://www.linkedin.com/in/mohammed97ashraf/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://medium.com/@mohammed97ashraf" target="_blank"><i class="fab fa-medium"></i></a>
+                        <a href="mailto:Mohammed97ashraf@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="text-center py-4">
-            <p>© 2025 Mohammed Ashraf. All rights reserved. | Built with Magic & Code.</p>
-        </footer>
-    </main>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+        onload="if(submitted) { window.location.reload(); alert('Message Sent!'); }"></iframe>
+    <script>var submitted = false;</script>
+    <script>document.getElementById('contact-form').onsubmit = function () { submitted = true; };</script>
+
+    <footer class="text-center py-4">
+        <p class="footer-text">© 2026 Mohammed Ashraf</p>
+    </footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/main_3d.js"></script>
 </body>
 
 </html>
